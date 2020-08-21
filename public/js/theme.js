@@ -200,36 +200,40 @@
   /*----------------------------------------------------*/
   /*  Jquery Ui slider js
     /*----------------------------------------------------*/
-  $('#slider-range, #slider-range2').slider({
+  $('#slider-range').slider({
     range: true,
     min: 0,
-    max: 500,
-    values: [80, 500],
+    max: 50000,
+    values: [800, 5000],
     slide: function (event, ui) {
-      $('#amount, #amount2').val('$' + ui.values[0] + ' $' + ui.values[1]);
+      $('#amount').val(
+        ui.values[0] + ' mil VND - ' + ui.values[1] + ' mil VND'
+      );
     }
   });
-  $('#amount, #amount2').val(
-    '$' +
-      $('#slider-range, #slider-range2').slider('values', 0) +
-      '   $' +
-      $('#slider-range, #slider-range2').slider('values', 1)
+
+  $('#amount').val(
+    $('#slider-range').slider('values', 0) +
+      ' mil VND - ' +
+      $('#slider-range').slider('values', 1) +
+      ' mil VND'
   );
 
   $('#slider-range2').slider({
     range: true,
-    min: 0,
-    max: 500,
-    values: [80, 500],
+    min: 20,
+    max: 50000,
+    values: [10, 10000],
     slide: function (event, ui) {
-      $('#amount2').val('$' + ui.values[0] + ' $' + ui.values[1]);
+      $('#amount2').val(ui.values[0] + ' m² - ' + ui.values[1] + ' m²');
     }
   });
+
   $('#amount2').val(
-    '$' +
-      $('#slider-range2').slider('values', 0) +
-      '   $' +
-      $('#slider-range2').slider('values', 1)
+    $('#slider-range2').slider('values', 0) +
+      ' m² - ' +
+      $('#slider-range2').slider('values', 1) +
+      ' m²'
   );
 
   //	/*----------------------------------------------------*/
