@@ -4279,6 +4279,17 @@ h6 {
   }
 }
 
+@media (max-width: 992px) {
+  #navbarSupportedContent {
+    background-color: #262626;
+    opacity: 0.95;
+  }
+
+  .nav-item {
+    padding-left: 12px;
+  }
+}
+
 .header_area .navbar .nav .nav-item .nav-link {
   font: 500 12px/100px 'Roboto', sans-serif;
   text-transform: uppercase;
