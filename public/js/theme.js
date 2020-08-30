@@ -128,9 +128,9 @@
         loop: true,
         margin: 30,
         items: 5,
-        nav: false,
-        autoplay: false,
-        smartSpeed: 1500,
+        autoplay: true,
+        autoplayTimeout: 1450,
+        autoplayHoverPause:false,
         dots: false,
         responsiveClass: true,
         responsive: {
@@ -163,7 +163,7 @@
       $('.testi_slider').owlCarousel({
         loop: true,
         margin: 30,
-        items: 2,
+        items: 4,
         nav: false,
         autoplay: false,
         smartSpeed: 1500,
@@ -175,6 +175,12 @@
           },
           576: {
             items: 2
+          },
+          1100: {
+            items: 3
+          },
+          1300: {
+            items: 4
           }
         }
       });
@@ -200,40 +206,36 @@
   /*----------------------------------------------------*/
   /*  Jquery Ui slider js
     /*----------------------------------------------------*/
-  $('#slider-range').slider({
+  $('#slider-range, #slider-range2').slider({
     range: true,
     min: 0,
-    max: 50000,
-    values: [800, 5000],
+    max: 500,
+    values: [80, 500],
     slide: function (event, ui) {
-      $('#amount').val(
-        ui.values[0] + ' mil VND - ' + ui.values[1] + ' mil VND'
-      );
+      $('#amount, #amount2').val('$' + ui.values[0] + ' $' + ui.values[1]);
     }
   });
-
-  $('#amount').val(
-    $('#slider-range').slider('values', 0) +
-      ' mil VND - ' +
-      $('#slider-range').slider('values', 1) +
-      ' mil VND'
+  $('#amount, #amount2').val(
+    '$' +
+    $('#slider-range, #slider-range2').slider('values', 0) +
+    '   $' +
+    $('#slider-range, #slider-range2').slider('values', 1)
   );
 
   $('#slider-range2').slider({
     range: true,
-    min: 20,
-    max: 50000,
-    values: [10, 10000],
+    min: 0,
+    max: 500,
+    values: [80, 500],
     slide: function (event, ui) {
-      $('#amount2').val(ui.values[0] + ' m² - ' + ui.values[1] + ' m²');
+      $('#amount2').val('$' + ui.values[0] + ' $' + ui.values[1]);
     }
   });
-
   $('#amount2').val(
+    '$' +
     $('#slider-range2').slider('values', 0) +
-      ' m² - ' +
-      $('#slider-range2').slider('values', 1) +
-      ' m²'
+    '   $' +
+    $('#slider-range2').slider('values', 1)
   );
 
   //	/*----------------------------------------------------*/
@@ -280,20 +282,16 @@
       disableDoubleClickZoom: true,
       mapTypeControl: false,
       zoom: $zoom,
-      styles: [
-        {
+      styles: [{
           featureType: 'water',
           elementType: 'geometry.fill',
-          stylers: [
-            {
-              color: '#dcdfe6'
-            }
-          ]
+          stylers: [{
+            color: '#dcdfe6'
+          }]
         },
         {
           featureType: 'transit',
-          stylers: [
-            {
+          stylers: [{
               color: '#808080'
             },
             {
@@ -304,8 +302,7 @@
         {
           featureType: 'road.highway',
           elementType: 'geometry.stroke',
-          stylers: [
-            {
+          stylers: [{
               visibility: 'on'
             },
             {
@@ -316,17 +313,14 @@
         {
           featureType: 'road.highway',
           elementType: 'geometry.fill',
-          stylers: [
-            {
-              color: '#ffffff'
-            }
-          ]
+          stylers: [{
+            color: '#ffffff'
+          }]
         },
         {
           featureType: 'road.local',
           elementType: 'geometry.fill',
-          stylers: [
-            {
+          stylers: [{
               visibility: 'on'
             },
             {
@@ -340,17 +334,14 @@
         {
           featureType: 'road.local',
           elementType: 'geometry.stroke',
-          stylers: [
-            {
-              color: '#d7d7d7'
-            }
-          ]
+          stylers: [{
+            color: '#d7d7d7'
+          }]
         },
         {
           featureType: 'poi',
           elementType: 'geometry.fill',
-          stylers: [
-            {
+          stylers: [{
               visibility: 'on'
             },
             {
@@ -361,35 +352,28 @@
         {
           featureType: 'administrative',
           elementType: 'geometry',
-          stylers: [
-            {
-              color: '#a7a7a7'
-            }
-          ]
+          stylers: [{
+            color: '#a7a7a7'
+          }]
         },
         {
           featureType: 'road.arterial',
           elementType: 'geometry.fill',
-          stylers: [
-            {
-              color: '#ffffff'
-            }
-          ]
+          stylers: [{
+            color: '#ffffff'
+          }]
         },
         {
           featureType: 'road.arterial',
           elementType: 'geometry.fill',
-          stylers: [
-            {
-              color: '#ffffff'
-            }
-          ]
+          stylers: [{
+            color: '#ffffff'
+          }]
         },
         {
           featureType: 'landscape',
           elementType: 'geometry.fill',
-          stylers: [
-            {
+          stylers: [{
               visibility: 'on'
             },
             {
@@ -400,17 +384,14 @@
         {
           featureType: 'road',
           elementType: 'labels.text.fill',
-          stylers: [
-            {
-              color: '#696969'
-            }
-          ]
+          stylers: [{
+            color: '#696969'
+          }]
         },
         {
           featureType: 'administrative',
           elementType: 'labels.text.fill',
-          stylers: [
-            {
+          stylers: [{
               visibility: 'on'
             },
             {
@@ -421,48 +402,38 @@
         {
           featureType: 'poi',
           elementType: 'labels.icon',
-          stylers: [
-            {
-              visibility: 'off'
-            }
-          ]
+          stylers: [{
+            visibility: 'off'
+          }]
         },
         {
           featureType: 'poi',
           elementType: 'labels',
-          stylers: [
-            {
-              visibility: 'off'
-            }
-          ]
+          stylers: [{
+            visibility: 'off'
+          }]
         },
         {
           featureType: 'road.arterial',
           elementType: 'geometry.stroke',
-          stylers: [
-            {
-              color: '#d6d6d6'
-            }
-          ]
+          stylers: [{
+            color: '#d6d6d6'
+          }]
         },
         {
           featureType: 'road',
           elementType: 'labels.icon',
-          stylers: [
-            {
-              visibility: 'off'
-            }
-          ]
+          stylers: [{
+            visibility: 'off'
+          }]
         },
         {},
         {
           featureType: 'poi',
           elementType: 'geometry.fill',
-          stylers: [
-            {
-              color: '#dadada'
-            }
-          ]
+          stylers: [{
+            color: '#dadada'
+          }]
         }
       ]
     });
