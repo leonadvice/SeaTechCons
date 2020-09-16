@@ -1,0 +1,18 @@
+.nice-select ul.list {
+  height: 300px;
+  overflow: scroll;
+}
+
+.home_banner_area .banner_inner .banner_content {
+  color: white;
+}
+
+.bg-white-custom {
+  background: transparent;
+  opacity: 0.95;
+  transition: 0.5s ease;
+}
+
+/* .bg-white-custom.scrolled {
+  background: #fff !important;
+} */

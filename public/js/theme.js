@@ -1,6 +1,94 @@
 (function ($) {
   'use strict';
 
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 300) {
+      $('.bg-white-custom').css('background', 'transparent');
+    } else {
+      $('.bg-white-custom').css('background', '#fff');
+    }
+  });
+
+  const stateList = document.getElementById('stateList');
+
+  const states = [
+    'Đà Nẵng',
+    'Hải Phòng',
+    'Hà Nội',
+    'Hồ Chí Minh',
+    'An Giang',
+    'Bà Rịa - Vũng Tàu',
+    'Bắc Giang',
+    'Bắc Kạn',
+    'Bạc Liêu',
+    'Bắc Ninh',
+    'Bến Tre',
+    'Bình Định',
+    'Bình Dương',
+    'Bình Phước',
+    'Bình Thuận',
+    'Cà Mau',
+    'Cao Bằng',
+    'Đắk Lắk',
+    'Đắk Nông',
+    'Điện Biên',
+    'Đồng Nai',
+    'Đồng Tháp',
+    'Gia Lai',
+    'Hà Giang',
+    'Hà Nam',
+    'Hà Tĩnh',
+    'Hải Dương',
+    'Hậu Giang',
+    'Hòa Bình',
+    'Hưng Yên',
+    'Khánh Hòa',
+    'Kiên Giang',
+    'Kon Tum',
+    'Lai Châu',
+    'Lâm Đồng',
+    'Lạng Sơn',
+    'Lào Cai',
+    'Long An',
+    'Nam Định',
+    'Nghệ An',
+    'Ninh Bình',
+    'Ninh Thuận',
+    'Phú Thọ',
+    'Quảng Bình',
+    'Quảng Nam',
+    'Quảng Ngãi',
+    'Quảng Ninh',
+    'Quảng Trị',
+    'Sóc Trăng',
+    'Sơn La',
+    'Tây Ninh',
+    'Thái Bình',
+    'Thái Nguyên',
+    'Thanh Hóa',
+    'Thừa Thiên Huế',
+    'Tiền Giang',
+    'Trà Vinh',
+    'Tuyên Quang',
+    'Vĩnh Long',
+    'Vĩnh Phúc',
+    'Yên Bái',
+    'Phú Yên',
+    'Cần Thơ'
+  ];
+
+  console.log(stateList);
+  for (let i = 0; i <= states.length - 1; i++) {
+    let option = document.createElement('OPTION');
+    option.innerHTML = states[i];
+    option.setAttribute('value', i + 1);
+    // console.log(option);
+    stateList.appendChild(option);
+    // console.log(i);
+  }
+  console.log(stateList);
+
   //	var nav_offset_top = $('header').height();
   //    /*-------------------------------------------------------------------------------
   //	  Navbar
@@ -130,7 +218,7 @@
         items: 5,
         autoplay: true,
         autoplayTimeout: 1450,
-        autoplayHoverPause:false,
+        autoplayHoverPause: false,
         dots: false,
         responsiveClass: true,
         responsive: {
@@ -217,9 +305,9 @@
   });
   $('#amount, #amount2').val(
     '$' +
-    $('#slider-range, #slider-range2').slider('values', 0) +
-    '   $' +
-    $('#slider-range, #slider-range2').slider('values', 1)
+      $('#slider-range, #slider-range2').slider('values', 0) +
+      '   $' +
+      $('#slider-range, #slider-range2').slider('values', 1)
   );
 
   $('#slider-range2').slider({
@@ -233,9 +321,9 @@
   });
   $('#amount2').val(
     '$' +
-    $('#slider-range2').slider('values', 0) +
-    '   $' +
-    $('#slider-range2').slider('values', 1)
+      $('#slider-range2').slider('values', 0) +
+      '   $' +
+      $('#slider-range2').slider('values', 1)
   );
 
   //	/*----------------------------------------------------*/
@@ -282,16 +370,20 @@
       disableDoubleClickZoom: true,
       mapTypeControl: false,
       zoom: $zoom,
-      styles: [{
+      styles: [
+        {
           featureType: 'water',
           elementType: 'geometry.fill',
-          stylers: [{
-            color: '#dcdfe6'
-          }]
+          stylers: [
+            {
+              color: '#dcdfe6'
+            }
+          ]
         },
         {
           featureType: 'transit',
-          stylers: [{
+          stylers: [
+            {
               color: '#808080'
             },
             {
@@ -302,7 +394,8 @@
         {
           featureType: 'road.highway',
           elementType: 'geometry.stroke',
-          stylers: [{
+          stylers: [
+            {
               visibility: 'on'
             },
             {
@@ -313,14 +406,17 @@
         {
           featureType: 'road.highway',
           elementType: 'geometry.fill',
-          stylers: [{
-            color: '#ffffff'
-          }]
+          stylers: [
+            {
+              color: '#ffffff'
+            }
+          ]
         },
         {
           featureType: 'road.local',
           elementType: 'geometry.fill',
-          stylers: [{
+          stylers: [
+            {
               visibility: 'on'
             },
             {
@@ -334,14 +430,17 @@
         {
           featureType: 'road.local',
           elementType: 'geometry.stroke',
-          stylers: [{
-            color: '#d7d7d7'
-          }]
+          stylers: [
+            {
+              color: '#d7d7d7'
+            }
+          ]
         },
         {
           featureType: 'poi',
           elementType: 'geometry.fill',
-          stylers: [{
+          stylers: [
+            {
               visibility: 'on'
             },
             {
@@ -352,28 +451,35 @@
         {
           featureType: 'administrative',
           elementType: 'geometry',
-          stylers: [{
-            color: '#a7a7a7'
-          }]
+          stylers: [
+            {
+              color: '#a7a7a7'
+            }
+          ]
         },
         {
           featureType: 'road.arterial',
           elementType: 'geometry.fill',
-          stylers: [{
-            color: '#ffffff'
-          }]
+          stylers: [
+            {
+              color: '#ffffff'
+            }
+          ]
         },
         {
           featureType: 'road.arterial',
           elementType: 'geometry.fill',
-          stylers: [{
-            color: '#ffffff'
-          }]
+          stylers: [
+            {
+              color: '#ffffff'
+            }
+          ]
         },
         {
           featureType: 'landscape',
           elementType: 'geometry.fill',
-          stylers: [{
+          stylers: [
+            {
               visibility: 'on'
             },
             {
@@ -384,14 +490,17 @@
         {
           featureType: 'road',
           elementType: 'labels.text.fill',
-          stylers: [{
-            color: '#696969'
-          }]
+          stylers: [
+            {
+              color: '#696969'
+            }
+          ]
         },
         {
           featureType: 'administrative',
           elementType: 'labels.text.fill',
-          stylers: [{
+          stylers: [
+            {
               visibility: 'on'
             },
             {
@@ -402,38 +511,48 @@
         {
           featureType: 'poi',
           elementType: 'labels.icon',
-          stylers: [{
-            visibility: 'off'
-          }]
+          stylers: [
+            {
+              visibility: 'off'
+            }
+          ]
         },
         {
           featureType: 'poi',
           elementType: 'labels',
-          stylers: [{
-            visibility: 'off'
-          }]
+          stylers: [
+            {
+              visibility: 'off'
+            }
+          ]
         },
         {
           featureType: 'road.arterial',
           elementType: 'geometry.stroke',
-          stylers: [{
-            color: '#d6d6d6'
-          }]
+          stylers: [
+            {
+              color: '#d6d6d6'
+            }
+          ]
         },
         {
           featureType: 'road',
           elementType: 'labels.icon',
-          stylers: [{
-            visibility: 'off'
-          }]
+          stylers: [
+            {
+              visibility: 'off'
+            }
+          ]
         },
         {},
         {
           featureType: 'poi',
           elementType: 'geometry.fill',
-          stylers: [{
-            color: '#dadada'
-          }]
+          stylers: [
+            {
+              color: '#dadada'
+            }
+          ]
         }
       ]
     });
@@ -443,3 +562,5 @@
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 5);
   });
 })(jQuery);
+
+//List of states in form selector
