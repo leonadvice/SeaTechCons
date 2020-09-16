@@ -1,14 +1,14 @@
 (function ($) {
   'use strict';
 
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll > 300) {
-      $('.bg-white-custom').css('background', 'transparent');
-    } else {
-      $('.bg-white-custom').css('background', '#fff');
-    }
-  });
+  // $(window).scroll(function () {
+  //   var scroll = $(window).scrollTop();
+  //   if (scroll > 300) {
+  //     $('.bg-white-custom').css('background', 'transparent');
+  //   } else {
+  //     $('.bg-white-custom').css('background', '#fff');
+  //   }
+  // });
 
   const stateList = document.getElementById('stateList');
 
