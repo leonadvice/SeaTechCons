@@ -1,93 +1,98 @@
 (function ($) {
   'use strict';
 
-  // $(window).scroll(function () {
-  //   var scroll = $(window).scrollTop();
-  //   if (scroll > 300) {
-  //     $('.bg-white-custom').css('background', 'transparent');
-  //   } else {
-  //     $('.bg-white-custom').css('background', '#fff');
-  //   }
-  // });
+  // List of all city
 
   const stateList = document.getElementById('stateList');
 
-  const states = [
-    'Đà Nẵng',
-    'Hải Phòng',
-    'Hà Nội',
-    'Hồ Chí Minh',
-    'An Giang',
-    'Bà Rịa - Vũng Tàu',
-    'Bắc Giang',
-    'Bắc Kạn',
-    'Bạc Liêu',
-    'Bắc Ninh',
-    'Bến Tre',
-    'Bình Định',
-    'Bình Dương',
-    'Bình Phước',
-    'Bình Thuận',
-    'Cà Mau',
-    'Cao Bằng',
-    'Đắk Lắk',
-    'Đắk Nông',
-    'Điện Biên',
-    'Đồng Nai',
-    'Đồng Tháp',
-    'Gia Lai',
-    'Hà Giang',
-    'Hà Nam',
-    'Hà Tĩnh',
-    'Hải Dương',
-    'Hậu Giang',
-    'Hòa Bình',
-    'Hưng Yên',
-    'Khánh Hòa',
-    'Kiên Giang',
-    'Kon Tum',
-    'Lai Châu',
-    'Lâm Đồng',
-    'Lạng Sơn',
-    'Lào Cai',
-    'Long An',
-    'Nam Định',
-    'Nghệ An',
-    'Ninh Bình',
-    'Ninh Thuận',
-    'Phú Thọ',
-    'Quảng Bình',
-    'Quảng Nam',
-    'Quảng Ngãi',
-    'Quảng Ninh',
-    'Quảng Trị',
-    'Sóc Trăng',
-    'Sơn La',
-    'Tây Ninh',
-    'Thái Bình',
-    'Thái Nguyên',
-    'Thanh Hóa',
-    'Thừa Thiên Huế',
-    'Tiền Giang',
-    'Trà Vinh',
-    'Tuyên Quang',
-    'Vĩnh Long',
-    'Vĩnh Phúc',
-    'Yên Bái',
-    'Phú Yên',
-    'Cần Thơ'
-  ];
+  if (stateList) {
+    const states = [
+      'Đà Nẵng',
+      'Hải Phòng',
+      'Hà Nội',
+      'Hồ Chí Minh',
+      'An Giang',
+      'Bà Rịa - Vũng Tàu',
+      'Bắc Giang',
+      'Bắc Kạn',
+      'Bạc Liêu',
+      'Bắc Ninh',
+      'Bến Tre',
+      'Bình Định',
+      'Bình Dương',
+      'Bình Phước',
+      'Bình Thuận',
+      'Cà Mau',
+      'Cao Bằng',
+      'Đắk Lắk',
+      'Đắk Nông',
+      'Điện Biên',
+      'Đồng Nai',
+      'Đồng Tháp',
+      'Gia Lai',
+      'Hà Giang',
+      'Hà Nam',
+      'Hà Tĩnh',
+      'Hải Dương',
+      'Hậu Giang',
+      'Hòa Bình',
+      'Hưng Yên',
+      'Khánh Hòa',
+      'Kiên Giang',
+      'Kon Tum',
+      'Lai Châu',
+      'Lâm Đồng',
+      'Lạng Sơn',
+      'Lào Cai',
+      'Long An',
+      'Nam Định',
+      'Nghệ An',
+      'Ninh Bình',
+      'Ninh Thuận',
+      'Phú Thọ',
+      'Quảng Bình',
+      'Quảng Nam',
+      'Quảng Ngãi',
+      'Quảng Ninh',
+      'Quảng Trị',
+      'Sóc Trăng',
+      'Sơn La',
+      'Tây Ninh',
+      'Thái Bình',
+      'Thái Nguyên',
+      'Thanh Hóa',
+      'Thừa Thiên Huế',
+      'Tiền Giang',
+      'Trà Vinh',
+      'Tuyên Quang',
+      'Vĩnh Long',
+      'Vĩnh Phúc',
+      'Yên Bái',
+      'Phú Yên',
+      'Cần Thơ'
+    ];
 
-  console.log(stateList);
-  for (let i = 0; i <= states.length - 1; i++) {
-    let option = document.createElement('OPTION');
-    option.innerHTML = states[i];
-    option.setAttribute('value', i + 1);
-    // console.log(option);
-    stateList.appendChild(option);
-    // console.log(i);
+    console.log(stateList);
+    for (let i = 0; i <= states.length - 1; i++) {
+      let option = document.createElement('OPTION');
+      option.innerHTML = states[i];
+      option.setAttribute('value', i + 1);
+      // console.log(option);
+      stateList.appendChild(option);
+      // console.log(i);
+    }
+    console.log(stateList);
   }
-  console.log(stateList);
+
+  //End city list
+
+  //square aspect ratio for projects
+
+  const cw = $('.square-aspect').width();
+  console.log(`This is square width: ${cw}`);
+  $('.square-aspect').css({ height: cw + 'px' });
+
+  //end of square asepct ratio
 
   //	var nav_offset_top = $('header').height();
   //    /*-------------------------------------------------------------------------------

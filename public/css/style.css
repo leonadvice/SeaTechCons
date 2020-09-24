@@ -768,8 +768,8 @@ button:focus {
 }
 
 .banner_area .banner_inner .overlay {
-  background: url(../img/myImg/pexels-aleksejs-bergmanis-681335.jpg) no-repeat
-    scroll center center;
+  background: url(../img/myImg/pexels-pixabay-259950.jpg) no-repeat scroll
+    center center;
   position: absolute;
   left: 0;
   right: 0;
@@ -4291,7 +4291,7 @@ h6 {
 }
 
 .header_area .navbar .nav .nav-item .nav-link {
-  font: 500 12px/100px 'Roboto', sans-serif;
+  font: 500 15px/100px 'Roboto', sans-serif;
   text-transform: uppercase;
   color: #212121;
   padding: 0px;
@@ -4441,4 +4441,43 @@ h6 {
 
 .bg-white-custom.scrolled {
   background: #fff !important;
+}
+
+.square-aspect {
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(117, 117, 117, 0.308);
+  -webkit-transition: box-shadow 0.5s; /* For Safari 3.0 to 6.0 */
+  transition: box-shadow 0.5s;
+}
+
+.square-aspect:hover {
+  box-shadow: none;
+}
+
+.square-pad {
+  padding: 10px;
+}
+
+.square-aspect .inner-square {
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 83%;
+  width: 83%;
+  border: 1px rgba(179, 179, 179, 0.747) solid;
+  background-color: rgba(117, 117, 117, 0.308);
+}
+
+.square-aspect a {
+  color: white;
+  padding: 5px 30px;
+  background: transparent;
+  border: 1px solid white;
 }
