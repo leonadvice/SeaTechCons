@@ -72,7 +72,6 @@
       'Cần Thơ'
     ];
 
-    console.log(stateList);
     for (let i = 0; i <= states.length - 1; i++) {
       let option = document.createElement('OPTION');
       option.innerHTML = states[i];
@@ -81,7 +80,6 @@
       stateList.appendChild(option);
       // console.log(i);
     }
-    console.log(stateList);
   }
 
   //End city list
@@ -89,7 +87,6 @@
   //square aspect ratio for projects
 
   const cw = $('.square-aspect').width();
-  console.log(`This is square width: ${cw}`);
   $('.square-aspect').css({ height: cw + 'px' });
 
   //end of square asepct ratio
@@ -567,5 +564,29 @@
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 5);
   });
 })(jQuery);
+
+//language selector
+
+// const changeLang = () => {
+//   console.log('test');
+// };
+
+const langSelector = document.getElementsByClassName('lang-selector');
+
+console.log(langSelector);
+
+Array.from(document.getElementsByClassName('lang-selector')).forEach(function (
+  element
+) {
+  element.addEventListener('click', function () {
+    Array.from(document.getElementsByClassName('lang-selector')).forEach(
+      function (element) {
+        element.textContent == 'ENG'
+          ? (element.textContent = 'VIE')
+          : (element.textContent = 'ENG');
+      }
+    );
+  });
+});
 
 //List of states in form selector

@@ -4284,8 +4284,17 @@ h6 {
   background: transparent;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .banner-form {
+    display: none;
+  }
+  .lang-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .lang-mobile {
     display: none;
   }
 }
@@ -4480,4 +4489,9 @@ h6 {
   padding: 5px 30px;
   background: transparent;
   border: 1px solid white;
+}
+
+.lang-selector {
+  font: 500 15px/100px 'Roboto', sans-serif;
+  color: #005bab !important;
 }
