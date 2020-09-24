@@ -4495,3 +4495,14 @@ h6 {
   font: 500 15px/100px 'Roboto', sans-serif;
   color: #005bab !important;
 }
+
+.logo_h img {
+  height: 100px;
+  width: auto;
+}
+
+@media (max-width: 450px) {
+  .logo_h img {
+    height: 70px;
+  }
+}
