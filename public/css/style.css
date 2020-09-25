@@ -4284,9 +4284,17 @@ h6 {
   background: transparent;
 }
 
+.banner-form.mobile {
+  display: none;
+  margin-top: 30px;
+}
+
 @media (max-width: 991px) {
-  .banner-form {
+  .banner-form.desktop {
     display: none;
+  }
+  .banner-form.mobile {
+    display: block;
   }
   .lang-desktop {
     display: none;

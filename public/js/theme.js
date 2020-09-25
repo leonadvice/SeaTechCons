@@ -3,9 +3,12 @@
 
   // List of all city
 
-  const stateList = document.getElementById('stateList');
+  const stateListDesktop = document.getElementById('stateListDesktop');
+  const stateListMobile = document.getElementById('stateListMobile');
+  // console.log(stateListDesktop);
+  // console.log(stateListMobile);
 
-  if (stateList) {
+  if (stateListDesktop && stateListMobile) {
     const states = [
       'Đà Nẵng',
       'Hải Phòng',
@@ -77,9 +80,11 @@
       option.innerHTML = states[i];
       option.setAttribute('value', i + 1);
       // console.log(option);
-      stateList.appendChild(option);
+      stateListDesktop.appendChild(option);
+      stateListMobile.appendChild(option.cloneNode(true));
       // console.log(i);
     }
+    // console.log(stateListDesktop);
   }
 
   //End city list
@@ -90,26 +95,6 @@
   $('.square-aspect').css({ height: cw + 'px' });
 
   //end of square asepct ratio
-
-  //	var nav_offset_top = $('header').height();
-  //    /*-------------------------------------------------------------------------------
-  //	  Navbar
-  //	-------------------------------------------------------------------------------*/
-  //
-  //	//* Navbar Fixed
-  //    function navbarFixed(){
-  //        if ( $('.header_area').length ){
-  //            $(window).scroll(function() {
-  //                var scroll = $(window).scrollTop();
-  //                if (scroll >= nav_offset_top ) {
-  //                    $(".header_area").addClass("navbar_fixed");
-  //                } else {
-  //                    $(".header_area").removeClass("navbar_fixed");
-  //                }
-  //            });
-  //        };
-  //    };
-  //    navbarFixed();
 
   /*----------------------------------------------------*/
   /*  Parallax Effect js
@@ -150,66 +135,7 @@
   //    causes_slider();
   //
   //	/*----------------------------------------------------*/
-  //    /*  Event Slider
-  //    /*----------------------------------------------------*/
-  //    function event_slider(){
-  //        if ( $('.event_slider').length ){
-  //            $('.event_slider').owlCarousel({
-  //                loop:true,
-  //                margin: 45,
-  //                items: 2,
-  //                nav: false,
-  //                autoplay: false,
-  //                smartSpeed: 1500,
-  //                dots:true,
-  //                responsiveClass: true,
-  //                responsive: {
-  //                    0: {
-  //                        items: 1,
-  //						margin: 20,
-  //                    },
-  //                    992: {
-  //                        margin: 20,
-  //						items: 2,
-  //                    },
-  //                    1199: {
-  //                        margin: 45,
-  //						items: 2,
-  //                    }
-  //                }
-  //            })
-  //        }
-  //    }
-  //    event_slider();
-  //
-  //	/*----------------------------------------------------*/
-  //    /*  Testimonials Slider
-  //    /*----------------------------------------------------*/
-  //    function testi_slider(){
-  //        if ( $('.testi_slider').length ){
-  //            $('.testi_slider').owlCarousel({
-  //                loop:true,
-  //                margin: 30,
-  //                items: 2,
-  //                nav: false,
-  //                autoplay: false,
-  //                smartSpeed: 1500,
-  //                dots:true,
-  //                responsiveClass: true,
-  //                responsive: {
-  //                    0: {
-  //                        items: 1,
-  //                    },
-  //                    576: {
-  //                        items: 2,
-  //                    }
-  //                }
-  //            })
-  //        }
-  //    }
-  //    testi_slider();
-  //
-  /*----------------------------------------------------*/
+
   /*  Clients Slider
     /*----------------------------------------------------*/
   function clients_slider() {
@@ -328,28 +254,6 @@
       $('#slider-range2').slider('values', 1)
   );
 
-  //	/*----------------------------------------------------*/
-  //    /*  Image Gallery js
-  //    /*----------------------------------------------------*/
-  //    function galleryMasonry(){
-  //        if ( $('.gallery_inner').length ){
-  //            $('.gallery_inner').imagesLoaded( function() {
-  //              // images have loaded
-  //                // Activate isotope in container
-  //                $(".gallery_inner").isotope({
-  //                    itemSelector: ".gallery_item",
-  //                    layoutMode: 'masonry',
-  //                    animationOptions: {
-  //                        duration: 750,
-  //                        easing: 'linear'
-  //                    }
-  //                });
-  //            })
-  //        }
-  //    }
-  //    galleryMasonry();
-
-  /*----------------------------------------------------*/
   /*  Google map js
     /*----------------------------------------------------*/
 
@@ -572,8 +476,6 @@
 // };
 
 const langSelector = document.getElementsByClassName('lang-selector');
-
-console.log(langSelector);
 
 Array.from(document.getElementsByClassName('lang-selector')).forEach(function (
   element

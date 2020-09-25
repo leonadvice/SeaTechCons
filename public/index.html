@@ -77,14 +77,15 @@
                   <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about-us.html">About</a>
+                  <a class="nav-link" href="agents.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="properties.html">Properties</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="agents.html">Team</a>
-                </li>
+
                 <!-- <li class="nav-item submenu dropdown">
                   <a
                     href="#"
@@ -223,7 +224,8 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <div class="container banner-form">
+      <!--Estimates form desktop-->
+      <div class="container banner-form desktop">
         <div class="advanced_search">
           <h3>Construction Estimate</h3>
           <div class="search_select">
@@ -260,7 +262,7 @@
               <option value="3">Light modification</option>
               <option value="4">Heavy modification</option>
             </select>
-            <select class="s_select" id="stateList">
+            <select class="s_select" id="stateListDesktop">
               <option value="0">Construction Location</option>
             </select>
           </div>
@@ -269,8 +271,58 @@
           </button>
         </div>
       </div>
+      <!--Estimates form-->
     </section>
     <!--================End Home Banner Area =================-->
+
+    <!--Estimates form mobile-->
+    <div class="container banner-form mobile">
+      <div class="advanced_search">
+        <h3>Construction Estimate</h3>
+        <div class="search_select">
+          <div class="contact_form">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Construction site address"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Construction area (m²)"
+              />
+            </div>
+          </div>
+          <select class="s_select">
+            <option value="1">Construction Type</option>
+            <option value="2">Empty lot</option>
+            <option value="3">Light modification</option>
+            <option value="4">Heavy modification</option>
+          </select>
+          <select class="s_select" id="stateListMobile">
+            <option value="0">Construction Location</option>
+          </select>
+        </div>
+        <button type="submit" value="submit" class="btn submit_btn">
+          Submit
+        </button>
+      </div>
+    </div>
+    <!--Estimates form-->
 
     <!--================Welcome Area =================-->
     <section class="welcome_area p_120">
