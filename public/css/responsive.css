@@ -175,6 +175,10 @@
   .welcome_text {
     margin-top: 50px;
   }
+
+  .welcome_text.short {
+    margin-top: 20px;
+  }
   .properties_item {
     max-width: 360px;
     margin: 0px auto 30px;

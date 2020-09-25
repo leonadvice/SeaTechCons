@@ -45,6 +45,25 @@ Table of Content:
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+
+.genric-btn.primary {
+  background: #005bab !important;
+}
+
+.genric-btn.primary:hover {
+  background: white !important;
+  color: #005bab !important;
+  border: #005bab solid 1px !important;
+}
+
+b,
+sup,
+sub,
+u,
+del {
+  color: black !important;
+}
+
 .list {
   list-style: none;
   margin: 0px;
@@ -441,6 +460,11 @@ button:focus {
   z-index: 1;
   min-height: 754px;
   margin-bottom: 140px;
+}
+
+.home_banner_area.short {
+  min-height: 70vh;
+  margin-bottom: 0px;
 }
 
 .home_banner_area .banner_inner {
@@ -4284,6 +4308,10 @@ h6 {
   background: transparent;
 }
 
+.home_banner_area .banner_inner.short {
+  min-height: 70vh;
+}
+
 .banner-form.mobile {
   display: none;
   margin-top: 30px;
@@ -4513,4 +4541,77 @@ h6 {
   .logo_h img {
     height: 70px;
   }
+}
+
+.welcome_area.short {
+  padding-top: 120px;
+  padding-bottom: 0px;
+}
+
+.cities_area.short {
+  margin-top: 60px;
+}
+
+.welcome_inner h2 {
+  color: #005bab;
+}
+
+.hover-blue:hover img {
+  border: solid 1px #005bab;
+}
+
+.hover-blue:hover h4 {
+  color: #005bab;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('../img/myImg/pexels-aleksejs-bergmanis-681335.jpg');
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p.less-margin {
+  margin-bottom: 20px;
+}
+
+.properties_item {
+  background-color: white;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials_inner .testi_left_text {
+  max-width: 1000px;
+  margin-bottom: 40px;
 }
