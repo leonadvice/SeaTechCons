@@ -4615,3 +4615,13 @@ p.less-margin {
   max-width: 1000px;
   margin-bottom: 40px;
 }
+
+.row.no-padding div {
+  padding: 0px;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
